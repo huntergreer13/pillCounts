@@ -2,9 +2,13 @@ const fs = require('fs');
 
 var args = process.argv.slice(2);
 
+if(args[0] == null) {
+  console.log("Error: No file provided. Please provide the file name using a command line such as \"node count.js \"myFile.txt\"\"");
+  return;
+}
+
 //open json file
 try {
-  //var filedata = fs.readFileSync('/Users/huntercarnes/Desktop/GAP/' + args[0], 'utf8');
   var filedata = fs.readFileSync('C:\\ProgramData\\Parata Systems LLC\\PASSServer\\OrderFileArchive\\' + args[0], 'utf8');
 } catch (e) {
   console.log("Error: ", e.stack);
@@ -49,7 +53,7 @@ for(var line = 0; line < lines.length - 1; line++) {
   obj.twenty_one = tmp[20];
   obj.twenty_two = tmp[21];
   obj.twenty_three = tmp[22];
-  obj.twenty_four = tmp[23];//.slice(0,-2); //remove \r at the end of this one
+  obj.twenty_four = tmp[23];
   obj.twenty_five = -1;
 
   data.push(obj);
@@ -117,5 +121,5 @@ for(var i = 0; i < data.length; i++) {
 //console.log(JSON.stringify(data));
 //console.log(output);
 
-fs.writeFileSync('/Users/huntercarnes/Desktop/GAP/' + args[0], output);
+fs.writeFileSync('C:\\ProgramData\\Parata Systems LLC\\PASSServer\\OrderFileArchive\\' + args[0], output);
 console.log("Program completed running.");
