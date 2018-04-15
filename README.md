@@ -12,6 +12,6 @@ In Command Prompt, type the following commands:
 ```
 cd /d "C:\ProgramData\Parata Systems LLC\PASSServer\OrderFileArchive"
 
-node count.js "*theFileNameToAddPillCountsTo.txt*"
+node count.js "myFileName.txt"
 ```
 
