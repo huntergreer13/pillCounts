@@ -54,8 +54,6 @@ for(var line = 0; line < lines.length - 1; line++) {
   obj.twenty_one = tmp[20];
   obj.twenty_two = tmp[21];
   obj.twenty_three = tmp[22];
-  console.log(tmp[23][0]);
-  console.log(tmp[23][1]);
   var found = false;
   var count = 0;
   for(var h = 0; h < tmp[23].length; h++) {
