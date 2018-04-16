@@ -7,9 +7,10 @@ if(args[0] == null) {
   return;
 }
 
+var filePath = "C:\\ProgramData\\Parata Systems LLC\\PASSServer\\OrderFileArchive\\";
 //open json file
 try {
-  var filedata = fs.readFileSync('C:\\ProgramData\\Parata Systems LLC\\PASSServer\\OrderFileArchive\\' + args[0], 'utf8');
+  var filedata = fs.readFileSync(filePath + args[0], 'utf8');
 } catch (e) {
   console.log("Error: ", e.stack);
 }
@@ -121,5 +122,5 @@ for(var i = 0; i < data.length; i++) {
 //console.log(JSON.stringify(data));
 //console.log(output);
 
-fs.writeFileSync('C:\\ProgramData\\Parata Systems LLC\\PASSServer\\OrderFileArchive\\' + args[0], output);
+fs.writeFileSync(filePath + args[0], output);
 console.log("Program completed running.");
