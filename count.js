@@ -54,18 +54,19 @@ for(var line = 0; line < lines.length - 1; line++) {
   obj.twenty_one = tmp[20];
   obj.twenty_two = tmp[21];
   obj.twenty_three = tmp[22];
-
+  console.log(tmp[23][0]);
+  console.log(tmp[23][1]);
   var found = false;
   var count = 0;
-  for(var h = 0; h < tmp[22].length; h++) {
-    if(tmp[22][h] == '\r') {
-       found = true;
+  for(var h = 0; h < tmp[23].length; h++) {
+    if(tmp[23][h] == '\r') {
+       break;
     }
-    if(tmp[22][h] != '\r' && found == false) {
+    if(tmp[23][h] != '\r' && found == false) {
        count = count + 1;
     }
   }
-  obj.twenty_four = tmp[22].substring(0,count);
+  obj.twenty_four = tmp[23].substring(0,count);
   obj.twenty_five = -1;
   data.push(obj);
   tmp = [];
