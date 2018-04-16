@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+var S = require('string');
 var args = process.argv.slice(2);
 
 if(args[0] == null) {
@@ -58,14 +58,17 @@ for(var line = 0; line < lines.length - 1; line++) {
   var twentyFour = tmp[23];
   var tmpStr = "";
   var found = false;
+  var count = 0;
   for(var h = 0; h < tmp[22].length; h++) {
-    if(twentyFour.substring(h,h+1) == '\r') {
+    if(S(twentyFour).substring(h,h+1) == '\r') {
        found = true;
     }
-    if(twentyFour.substring(h,h+1) != '\r' && found == false) {
-       tmpStr = tmpStr + twentyFour[h];
+    if(S(twentyFour).substring(h,h+1) != '\r' && found == false) {
+       //tmpStr = tmpStr + twentyFour[h];
+       count = count + 1;
     }
   }
+  twentyFour = S(twentyFour).left(count).s;
   obj.twenty_four = tmpStr;
   obj.twenty_five = -1;
 
