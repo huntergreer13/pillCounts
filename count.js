@@ -60,15 +60,15 @@ for(var line = 0; line < lines.length - 1; line++) {
   var found = false;
   var count = 0;
   for(var h = 0; h < tmp[22].length; h++) {
-    if(S(twentyFour).substring(h,h+1) == '\r') {
+    if(tmp[22][h] == '\r') {
        found = true;
     }
-    if(S(twentyFour).substring(h,h+1) != '\r' && found == false) {
+    if(tmp[22][h] != '\r' && found == false) {
        //tmpStr = tmpStr + twentyFour[h];
        count = count + 1;
     }
   }
-  twentyFour = S(twentyFour).left(count).s;
+  twentyFour = S(twentyFour).left(count);
   obj.twenty_four = tmpStr;
   obj.twenty_five = -1;
 
