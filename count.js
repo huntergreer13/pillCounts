@@ -58,7 +58,7 @@ for(var line = 0; line < lines.length - 1; line++) {
   var twentyFour = tmp[23];
   var tmpStr = "";
   var found = false;
-  for(var h = 0; h < twentyFour.length; h++) {
+  for(var h = 0; h < tmp[22].length; h++) {
     if(twentyFour[h] == '\r') {
        found = true;
     }
@@ -66,7 +66,7 @@ for(var line = 0; line < lines.length - 1; line++) {
        tmpStr = tmpStr + twentyFour[h];
     }
   }
-  obj.twenty_four = tmpStr;    //tmp[23].replace(/(\r\n|\n|\r)/gm," ");
+  obj.twenty_four = tmpStr;
   obj.twenty_five = -1;
 
   data.push(obj);
