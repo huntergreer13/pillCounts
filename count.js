@@ -57,7 +57,7 @@ for(var line = 0; line < lines.length - 1; line++) {
 
   var found = false;
   var count = 0;
-  for(var h = 0; h < tmp[22].length; h++) {
+  for(var h = 0; h < tmp[23].length; h++) {
     if(tmp[22][h] == '\r') {
        found = true;
     }
@@ -65,7 +65,7 @@ for(var line = 0; line < lines.length - 1; line++) {
        count = count + 1;
     }
   }
-  obj.twenty_four = tmp[22].substring(0,count);
+  obj.twenty_four = tmp[23].substring(0,count);
   obj.twenty_five = -1;
   data.push(obj);
   tmp = [];
