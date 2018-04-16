@@ -55,8 +55,8 @@ for(var line = 0; line < lines.length - 1; line++) {
   obj.twenty_one = tmp[20];
   obj.twenty_two = tmp[21];
   obj.twenty_three = tmp[22];
-
-  var x = tmp[23];
+  obj.twenty_four = tmp[23];
+  /*var x = tmp[23];
   var found = false;
   var count = 0;
   for(var h = 0; h < x.length; h++) {
@@ -67,7 +67,7 @@ for(var line = 0; line < lines.length - 1; line++) {
        count = count + 1;
     }
   }
-  obj.twenty_four = x.substring(0,count);
+  obj.twenty_four = x.substring(0,count);*/
   obj.twenty_five = -1;
   data.push(obj);
   tmp = [];
