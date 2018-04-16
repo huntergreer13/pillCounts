@@ -54,7 +54,19 @@ for(var line = 0; line < lines.length - 1; line++) {
   obj.twenty_one = tmp[20];
   obj.twenty_two = tmp[21];
   obj.twenty_three = tmp[22];
-  obj.twenty_four = tmp[23].replace(/(\r\n\t|\n|\r\t)/gm, '');
+
+  var twentyFour = tmp[23];
+  var tmpStr = "";
+  var found = false;
+  for(var h = 0; h < twentyFour.length; h++) {
+    if(twentyFour[h] == '\r') {
+       found = true;
+    }
+    elseif(found == false) {
+       tmpStr = tmpStr + twentyFour[h];
+    }
+  }
+  obj.twenty_four = tmpStr;    //tmp[23].replace(/(\r\n|\n|\r)/gm," ");
   obj.twenty_five = -1;
 
   data.push(obj);
