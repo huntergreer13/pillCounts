@@ -62,7 +62,7 @@ for(var line = 0; line < lines.length - 1; line++) {
     if(twentyFour[h] == '\r') {
        found = true;
     }
-    elseif(found == false) {
+    if(twentyFour[h] != '\r' && found == false) {
        tmpStr = tmpStr + twentyFour[h];
     }
   }
