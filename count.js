@@ -54,7 +54,7 @@ for(var line = 0; line < lines.length - 1; line++) {
   obj.twenty_one = tmp[20];
   obj.twenty_two = tmp[21];
   obj.twenty_three = tmp[22];
-  obj.twenty_four = tmp[23].replace(/[\r]/g, '');
+  obj.twenty_four = tmp[23].replace(/(\r\n\t|\n|\r\t)/gm, '');
   obj.twenty_five = -1;
 
   data.push(obj);
