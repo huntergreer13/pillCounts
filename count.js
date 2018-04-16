@@ -59,10 +59,10 @@ for(var line = 0; line < lines.length - 1; line++) {
   var tmpStr = "";
   var found = false;
   for(var h = 0; h < tmp[22].length; h++) {
-    if(twentyFour[h] == '\r') {
+    if(twentyFour.substring(h,h+1) == '\r') {
        found = true;
     }
-    if(twentyFour[h] != '\r' && found == false) {
+    if(twentyFour.substring(h,h+1) != '\r' && found == false) {
        tmpStr = tmpStr + twentyFour[h];
     }
   }
