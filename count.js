@@ -16,7 +16,6 @@ try {
 }
 
 //Loop through lines of file and load data into JSON
-//var lines = filedata.split('\n');
 var lines = filedata.split(/[\n\r]/);
 var tmp = []; //holds each individual item in a line of the file
 var data = []; //JSON to load file contents to
@@ -33,6 +32,7 @@ for(var line = 0; line < lines.length - 1; line++) {
     }
     if(tmp[i] == undefined) {
       hasUndefined = true;
+      break;
     }
   }
 
@@ -61,19 +61,6 @@ for(var line = 0; line < lines.length - 1; line++) {
     obj.twenty_two = tmp[21];
     obj.twenty_three = tmp[22];
     obj.twenty_four = tmp[23];
-    //obj.twenty_four = "Rx"; //tmp[23];
-    /*var x = tmp[23];
-    var found = false;
-    var count = 0;
-    for(var h = 0; h < x.length; h++) {
-      if(x[h] == '\r') {
-         break;
-      }
-      if(x[h] != '\r' && found == false) {
-         count = count + 1;
-      }
-    }
-    obj.twenty_four = x.substring(0,count);*/
     obj.twenty_five = -1;
     data.push(obj);
     tmp = [];
