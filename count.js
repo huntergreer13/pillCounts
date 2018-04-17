@@ -20,7 +20,6 @@ var lines = filedata.split('\n');
 var tmp = []; //holds each individual item in a line of the file
 var data = []; //JSON to load file contents to
 var obj = {}; //temp objects to be placed into JSON
-console.log(lines.length - 1);
 for(var line = 0; line < lines.length - 1; line++) {
   tmp = lines[line].split('~');
 
