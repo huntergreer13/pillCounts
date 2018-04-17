@@ -22,59 +22,64 @@ var tmp = []; //holds each individual item in a line of the file
 var data = []; //JSON to load file contents to
 var obj = {}; //temp objects to be placed into JSON
 for(var line = 0; line < lines.length - 1; line++) {
-  console.log(line);
-
   tmp = lines[line].split('~');
 
+  var hasUndefined = false;
   for(var i = 0; i < tmp.length; i++) {
     if(tmp[i] == "" || tmp[i] == null) {
       //remove empty items
       tmp.splice(i, 1);
       i--;
     }
+    if(tmp[i] == undefined) {
+      hasUndefined = true;
+    }
   }
 
-  obj.one = tmp[0];
-  obj.two = tmp[1];
-  obj.three = tmp[2];
-  obj.four = tmp[3];
-  obj.five = tmp[4];
-  obj.six = tmp[5];
-  obj.seven = tmp[6];
-  obj.eight = tmp[7];
-  obj.nine = tmp[8];
-  obj.ten = tmp[9];
-  obj.eleven = tmp[10];
-  obj.twelve = tmp[11];
-  obj.thirteen = tmp[12];
-  obj.fourteen = tmp[13];
-  obj.fifteen = tmp[14];
-  obj.sixteen = tmp[15];
-  obj.seventeen = tmp[16];
-  obj.eighteen = tmp[17];
-  obj.nineteen = tmp[18];
-  obj.twenty = tmp[19];
-  obj.twenty_one = tmp[20];
-  obj.twenty_two = tmp[21];
-  obj.twenty_three = tmp[22];
-  obj.twenty_four = tmp[23];
-  //obj.twenty_four = "Rx"; //tmp[23];
-  /*var x = tmp[23];
-  var found = false;
-  var count = 0;
-  for(var h = 0; h < x.length; h++) {
-    if(x[h] == '\r') {
-       break;
+  if(!hasUndefined) {
+    obj.one = tmp[0];
+    obj.two = tmp[1];
+    obj.three = tmp[2];
+    obj.four = tmp[3];
+    obj.five = tmp[4];
+    obj.six = tmp[5];
+    obj.seven = tmp[6];
+    obj.eight = tmp[7];
+    obj.nine = tmp[8];
+    obj.ten = tmp[9];
+    obj.eleven = tmp[10];
+    obj.twelve = tmp[11];
+    obj.thirteen = tmp[12];
+    obj.fourteen = tmp[13];
+    obj.fifteen = tmp[14];
+    obj.sixteen = tmp[15];
+    obj.seventeen = tmp[16];
+    obj.eighteen = tmp[17];
+    obj.nineteen = tmp[18];
+    obj.twenty = tmp[19];
+    obj.twenty_one = tmp[20];
+    obj.twenty_two = tmp[21];
+    obj.twenty_three = tmp[22];
+    obj.twenty_four = tmp[23];
+    //obj.twenty_four = "Rx"; //tmp[23];
+    /*var x = tmp[23];
+    var found = false;
+    var count = 0;
+    for(var h = 0; h < x.length; h++) {
+      if(x[h] == '\r') {
+         break;
+      }
+      if(x[h] != '\r' && found == false) {
+         count = count + 1;
+      }
     }
-    if(x[h] != '\r' && found == false) {
-       count = count + 1;
-    }
+    obj.twenty_four = x.substring(0,count);*/
+    obj.twenty_five = -1;
+    data.push(obj);
+    tmp = [];
+    obj = {};
   }
-  obj.twenty_four = x.substring(0,count);*/
-  obj.twenty_five = -1;
-  data.push(obj);
-  tmp = [];
-  obj = {};
+
 }
 
 
