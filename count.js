@@ -16,7 +16,8 @@ try {
 }
 
 //Loop through lines of file and load data into JSON
-var lines = filedata.split('\n', '\r');
+//var lines = filedata.split('\n');
+var lines = filedata.split(/[\n\r]/);
 var tmp = []; //holds each individual item in a line of the file
 var data = []; //JSON to load file contents to
 var obj = {}; //temp objects to be placed into JSON
@@ -54,7 +55,8 @@ for(var line = 0; line < lines.length - 1; line++) {
   obj.twenty_one = tmp[20];
   obj.twenty_two = tmp[21];
   obj.twenty_three = tmp[22];
-  obj.twenty_four = "Rx"; //tmp[23];
+  obj.twenty_four = tmp[23];
+  //obj.twenty_four = "Rx"; //tmp[23];
   /*var x = tmp[23];
   var found = false;
   var count = 0;
