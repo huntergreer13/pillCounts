@@ -22,9 +22,7 @@ var tmp = []; //holds each individual item in a line of the file
 var data = []; //JSON to load file contents to
 var obj = {}; //temp objects to be placed into JSON
 for(var line = 0; line < lines.length - 1; line++) {
-  while(line == undefined) {
-    line = line + 1;
-  }
+  console.log(line);
 
   tmp = lines[line].split('~');
 
