@@ -2,7 +2,7 @@
 
 Pre-Work (Ignore this if you're just running the program)
 
-1. Save count.js to filepath C:\ProgramData\Parata Systems LLC\PASSServer\OrderFileArchive
+1. Save count.js to filepath C:\Users\Operator\Desktop 
 
 2. Install Node.js at https://nodejs.org/en/download/
 
