@@ -6,6 +6,8 @@ Pre-Work (Ignore this if you're just running the program)
 
 2. Install Node.js at https://nodejs.org/en/download/
 
+3. Install WampServer at http://www.wampserver.com/en/ and download the index.html file to the www folder
+
 
 ## To Run Program:
 1. Click 'Start' button and search for 'Command Prompt' (NOT node.js command prompt!). Open Command Prompt.
